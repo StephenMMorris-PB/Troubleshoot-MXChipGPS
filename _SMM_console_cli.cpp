@@ -35,7 +35,8 @@ struct console_command
 ////////////////////////////////////////////////////////////////////////////////////
 // System functions
 extern UARTClass Serial;
-extern UARTClass Serial1;
+extern UARTClass Serial1;  //smm-3/4/2020-added to comment to clarify that this is a change I made, per Parag.
+                           //smm-continued-this change may not be necessary.
 
 
 ////////////////////////////////////////////////////////////////////////////////////
