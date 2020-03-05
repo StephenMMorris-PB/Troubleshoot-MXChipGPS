@@ -40,11 +40,40 @@
 <summary>Solution (attempts) to Issues</summary>
 <p>
 
-- Solution1: File1
-- Solution2: File2
-- Solution3: File3
-- Solution4: File4
+- Solution1a: "Adafruit_GPS.h". Added: #include <AZ3166SPI.h>. Goal: reconcile SPI-undefined issue.
+
+- Solution1b: "Adafruit_GPS.h". Because SoftwareSerial not available in MXChip library. Goal: followed in-file
+              suggestion to comment out this option, lines 39 & 40:
+              #define USE_SW_SERIAL ///< comment this out if you don't want to include
+                                    ///< software serial in the library
+
+- Solution2: "UARTClass.h". Added constructor, "UARTClass(UARTName p)" to "class UARTClass : public
+              HardwareSerial".  Goal: setup up 2nd serial port (on finger connector), following Rob Miles proposed approach.
+
+- Solution3: "Wire.h". Added member function, "uint8_t requestFrom(uint8_t, uint8_t, uint32_t, uint8_t, uint8_t)"
+             to "class TwoWire". Also, added "#define WIRE_ERROR (-1)"
+             Goal: to provide same member functions as shown in Arduino library.
+
+- Solution4: "Variant.h": Added "extern UARTClass Serial1".  "Variant.cpp": Added "UARTClass Serial1(UART_1)".
+             Goal: following Rob Miles recommendation.  
+
 - Solution5: File5
+
+</p>
+</details>
+
+
+<details>
+<summary>Assumptions/Questions</summary>
+<p>
+
+- 1. MXChip can not use SoftwareSerial functions
+- 2. 2nd Serial port for MXChip-GPS communications must be UART (not SPI or i2c)
+- 3. Order of Serial vs. GPS initialization/functions
+- 4. Syntax in main.cpp for:  Adafruit_GPS(HardwareSerial *ser); // Constructor when using HardwareSerial
+- 5. Syntax in main.cpp for: UARTClass Serial1(UART_1);
+- 6. Reconciling library differences between PlatformIO-IDE vs. Arduino-IDE
+- 7. How to reconcile SPI.h functionality and low-level driver functionality?
 
 </p>
 </details>
