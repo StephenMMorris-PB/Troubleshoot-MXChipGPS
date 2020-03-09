@@ -2,7 +2,7 @@
 
 ## Status - 3/9/2020
 <details>
-<summary>This directory: "Troubleshoot-MXChipGPS"</summary>
+<summary>This repo: "Troubleshoot-MXChipGPS"</summary>
 <p>
 
 - All initial set of files from 3/4/2020 were deleted here on 3/9/2020.
