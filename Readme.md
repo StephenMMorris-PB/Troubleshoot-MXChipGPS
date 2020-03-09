@@ -1,5 +1,18 @@
 # Repo for general troubleshooting - open to public
 
+## Status - 3/9/2020
+<details>
+<summary>This directory: "Troubleshoot-MXChipGPS"</summary>
+<p>
+
+- This is a listing of files reviewed and/or changed on 3/4/2020.
+- These files will not be modified as of today, 3/8/2020.
+- See the subdirectories for future updates.
+
+</p>
+</summary>
+</details>
+
 ## Status - 3/4/2020
 
 <details>
